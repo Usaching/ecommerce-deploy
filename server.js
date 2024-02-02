@@ -1,9 +1,4 @@
-// username:usamarma4
-//passWord: Usamarma4
-// const express = require('express');
-// const colors = require('colors');
 
-//http://localhost:8080/api/v1/auth/register
 
 import express from "express";
 import colors from "colors";
@@ -50,13 +45,11 @@ app.use("/api/v1/product", productRoutes)
 //     res.send('<h1>Welcome</h1>');
 // });
 app.get('*', function(req,res) {
-    res.sendFile(path.join(__dirname, './client/build/index.html'), function(err) {
-        res.status(500).send(err);
-    });
-})
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 //PORT
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8070;
 
 //run listen
 app.listen(PORT, () => {
